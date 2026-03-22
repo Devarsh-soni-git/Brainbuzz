@@ -1,0 +1,77 @@
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 32px;
+  background: rgba(10,10,15,0.88);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.3s, border-color 0.3s;
+}
+
+[data-theme="light"] .nav { background: rgba(244,244,240,0.92); }
+
+.logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800; font-size: 1.3rem;
+  letter-spacing: -0.5px;
+  display: flex; align-items: center; gap: 8px;
+  cursor: pointer;
+}
+
+.accent { color: var(--accent); }
+
+.dot {
+  width: 8px; height: 8px;
+  background: var(--accent); border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.right { display: flex; align-items: center; gap: 10px; }
+
+.badge {
+  font-size: 0.68rem; color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 4px 10px; border-radius: 20px;
+  transition: border-color 0.3s;
+}
+
+.themeRow { display: flex; align-items: center; gap: 6px; }
+.themeIcon { font-size: 14px; }
+
+.toggle {
+  width: 44px; height: 24px; border-radius: 12px;
+  background: var(--border); border: 1px solid var(--border);
+  position: relative; transition: background 0.3s;
+}
+
+.toggle::after {
+  content: ''; position: absolute;
+  top: 3px; left: 3px;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: var(--accent);
+  transition: transform 0.3s;
+}
+
+.toggle[data-active="true"]::after { transform: translateX(20px); }
+
+.logoutBtn {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.8rem; font-weight: 600;
+  background: var(--accent); color: #0a0a0f;
+  border: none; padding: 8px 18px; border-radius: 6px;
+  transition: all 0.2s;
+}
+.logoutBtn:hover { filter: brightness(1.1); transform: translateY(-1px); }
+
+.adminBtn {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: rgba(91,156,246,0.12);
+  color: var(--accent3);
+  border: 1px solid rgba(91,156,246,0.25);
+  padding: 7px 14px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+.adminBtn:hover { background: rgba(91,156,246,0.22); }

@@ -1,0 +1,214 @@
+.page {
+  min-height: 100vh;
+  padding: 90px 40px 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  animation: fadeUp 0.4s ease;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.backBtn {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--muted);
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin-bottom: 8px;
+  display: block;
+  transition: color 0.2s;
+}
+.backBtn:hover { color: var(--accent); }
+
+.title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.1;
+}
+
+.sub {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.createBtn {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  background: var(--accent);
+  color: #0a0a0f;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  white-space: nowrap;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+.createBtn:hover { filter: brightness(1.1); transform: translateY(-1px); }
+
+/* Empty */
+.empty { color: var(--muted); font-size: 0.85rem; padding: 40px 0; }
+
+.emptyState {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--card);
+  border: 1px dashed var(--border);
+  border-radius: 16px;
+}
+
+.emptyIcon { font-size: 2.5rem; margin-bottom: 12px; }
+.emptyText { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+.emptySub { font-size: 0.78rem; color: var(--muted); margin-bottom: 24px; }
+
+/* List */
+.list {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px var(--shadow);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--border);
+  gap: 16px;
+  transition: background 0.15s;
+}
+.row:last-child { border-bottom: none; }
+.row:hover { background: rgba(128,128,128,0.03); }
+
+.diffBadge {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.easy   { background: rgba(200,245,61,0.12); color: var(--accent); }
+.medium { background: rgba(245,166,35,0.15); color: #f5a623; }
+.hard   { background: rgba(255,95,87,0.15);  color: var(--accent2); }
+
+.info { flex: 1; min-width: 0; }
+
+.quizTitle {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 4px;
+}
+
+.quizMeta {
+  font-size: 0.7rem;
+  color: var(--muted);
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.playBtn {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: rgba(200,245,61,0.1);
+  color: var(--accent);
+  border: 1px solid rgba(200,245,61,0.25);
+  padding: 7px 14px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+.playBtn:hover { background: rgba(200,245,61,0.2); }
+
+.editBtn {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: rgba(91,156,246,0.1);
+  color: var(--accent3);
+  border: 1px solid rgba(91,156,246,0.25);
+  padding: 7px 14px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+.editBtn:hover { background: rgba(91,156,246,0.2); }
+
+.deleteBtn {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: rgba(255,95,87,0.1);
+  color: var(--accent2);
+  border: 1px solid rgba(255,95,87,0.25);
+  padding: 7px 14px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+.deleteBtn:hover { background: rgba(255,95,87,0.2); }
+
+.confirmRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.confirmText {
+  font-size: 0.72rem;
+  color: var(--accent2);
+}
+
+.confirmYes {
+  font-size: 0.72rem;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  background: var(--accent2);
+  color: #fff;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 5px;
+  transition: opacity 0.2s;
+}
+.confirmYes:disabled { opacity: 0.6; }
+
+.confirmNo {
+  font-size: 0.72rem;
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  background: var(--surface);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 5px 12px;
+  border-radius: 5px;
+}
