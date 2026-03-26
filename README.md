@@ -191,4 +191,4 @@ MIT — free to use and modify.
 
 ---
 
-<p align="center">Built with ❤️ using the MERN Stack</p>
+
